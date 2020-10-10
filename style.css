@@ -4,7 +4,7 @@ body {
   line-height: 1;
 }
 
-textarea{
+textarea {
   background: transparent;
   border: none;
   resize: none;
@@ -25,6 +25,7 @@ textarea{
   white-space: pre-wrap;
 }
 
+/* Assigned Class When Being Edited */
 .time-block{
   text-align: center;
   border-radius: 15px;
@@ -58,6 +59,7 @@ textarea{
 }
 
 .saveBtn {
+  
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
