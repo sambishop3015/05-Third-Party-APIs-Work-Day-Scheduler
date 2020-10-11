@@ -27,8 +27,7 @@ $(document).ready(function() {
         localStorage.setItem('hour5', value5); 
 
         location.reload();
-        
-    })
+    });
 
     $('#hour-9').text(localStorage.getItem('hour9'));
     $('#hour-10').text(localStorage.getItem('hour10'));
@@ -39,8 +38,6 @@ $(document).ready(function() {
     $('#hour-3').text(localStorage.getItem('hour3'));
     $('#hour-4').text(localStorage.getItem('hour4'));
     $('#hour-5').text(localStorage.getItem('hour5'));
-    
-    
     
     
 
