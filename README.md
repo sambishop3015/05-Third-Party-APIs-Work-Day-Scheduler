@@ -5,7 +5,7 @@ The objective of this project was to build a daily calendar.
 This project needed to include; the use of momenet.js library, ability to save events for each hour, display of current day at top of calendar, a view of hour time blocks for normal business hours, color coding of time blocks pased on past/present/future relation, and all calendar events saved to localStorage. 
 
 ## Viewing Project
-This project can be viewed at https://sambishop3015.github.io/04-Web-APIs-Code-Quiz-2/. 
+This project can be viewed at https://sambishop3015.github.io/05-Third-Party-APIs-Work-Day-Scheduler/. 
 
 ## Contributors
 @sambishop3015
