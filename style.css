@@ -8,9 +8,17 @@ textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+  margin: 0;
+}
+
+.row {
+  margin: 39px
+}
+
+textarea.description {
+  color: black;
 }
 
 .jumbotron {
@@ -59,7 +67,6 @@ textarea {
 }
 
 .saveBtn {
-  
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;

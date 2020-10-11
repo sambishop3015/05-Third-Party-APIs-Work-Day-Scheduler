@@ -4,6 +4,113 @@ $(document).ready(function() {
     //     alert('You clicked me!');
     // })
 
+    const m = moment();
+    let dateDisplay = m.format('dddd, MMMM Do YYYY');
+    let currentHour = m.format('H');
+
+    $('#currentDay').text(dateDisplay);
+
+
+    if (currentHour > 9) {
+        $('#hour-9').addClass('past');
+    } else if (currentHour == 9) {
+        $('#hour-9').addClass('present');
+    } else if (currentHour < 9) {
+        $('#hour-9').addClass('future');
+    }
+
+    if (currentHour > 10) {
+        $('#hour-10').addClass('past');
+    } else if (currentHour == 10) {
+        $('#hour-10').addClass('present');
+    } else if (currentHour < 10) {
+        $('#hour-10').addClass('future');
+    }
+    
+    if (currentHour > 11) {
+        $('#hour-11').addClass('past');
+    } else if (currentHour == 11) {
+        $('#hour-11').addClass('present');
+    } else if (currentHour < 11) {
+        $('#hour-11').addClass('future');
+    }
+    
+    if (currentHour > 12) {
+        $('#hour-12').addClass('past');
+    } else if (currentHour == 12) {
+        $('#hour-12').addClass('present');
+    } else if (currentHour < 12) {
+        $('#hour-12').addClass('future');
+    }
+    
+    if (currentHour > 13) {
+        $('#hour-1').addClass('past');
+    } else if (currentHour == 13) {
+        $('#hour-1').addClass('present');
+    } else if (currentHour < 13) {
+        $('#hour-1').addClass('future');
+    }
+    
+    if (currentHour > 14) {
+        $('#hour-2').addClass('past');
+    } else if (currentHour == 14) {
+        $('#hour-2').addClass('present');
+    } else if (currentHour < 14) {
+        $('#hour-2').addClass('future');
+    }
+    
+    if (currentHour > 15) {
+        $('#hour-3').addClass('past');
+    } else if (currentHour == 15) {
+        $('#hour-3').addClass('present');
+    } else if (currentHour < 15) {
+        $('#hour-3').addClass('future');
+    }
+    
+    if (currentHour > 16) {
+        $('#hour-4').addClass('past');
+    } else if (currentHour == 16) {
+        $('#hour-4').addClass('present');
+    } else if (currentHour < 16) {
+        $('#hour-4').addClass('future');
+    }
+    
+    if (currentHour > 17) {
+        $('#hour-5').addClass('past');
+    } else if (currentHour == 17) {
+        $('#hour-5').addClass('present');
+    } else if (currentHour < 17) {
+        $('#hour-5').addClass('future');
+    }
+
+    // if (currentHour = 13) {
+    //     $('#hour-1').removeClass('past');
+    //     $('#hour-1').removeClass('future');
+    //     $('#hour-1').addClass('present');
+    // } else if (currentHour < 13) {
+    //     $('#hour-1').removeClass('past');
+    //     $('#hour-1').removeClass('present');
+    //     $('#hour-1').addClass('future');
+    // } else if (currentHour > 13) {
+    //     $('#hour-1').removeClass('present');
+    //     $('#hour-1').removeClass('future');
+    //     $('#hour-1').addClass('past');
+    // }
+
+    // if (currentHour = 9) {
+    //     $('#hour-9').removeClass('past');
+    //     $('#hour-9').removeClass('future');
+    //     $('#hour-1').addClass('present');
+    // } else if (currentHour < 9) {
+    //     $('#hour-9').removeClass('past');
+    //     $('#hour-9').removeClass('present');
+    //     $('#hour-9').addClass('future');
+    // } else if (currentHour > 9) {
+    //     $('#hour-9').removeClass('present');
+    //     $('#hour-9').removeClass('future');
+    //     $('#hour-9').addClass('past');
+    // }
+
     $('.saveBtn').on('click', function() {
         const value9 = $('#hour-9').val();
         const value10 = $('#hour-10').val();
