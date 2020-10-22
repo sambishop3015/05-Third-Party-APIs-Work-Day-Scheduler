@@ -1,89 +1,32 @@
 //Make sure the html is loaded before running script
-$(document).ready(function() {
+$(document).ready(function () {
 
     //Time Variables
     const m = moment();
     let dateDisplay = m.format('dddd, MMMM Do YYYY');
-    let currentHour = m.format('H');
+    let currentHour = parseInt(m.format('H'));
 
     //Display Current Date
     $('#currentDay').text(dateDisplay);
 
     //Color Coding IF/ELSE Statements
-    if (currentHour > 9) {
-        $('#hour-9').addClass('past');
-    } else if (currentHour == 9) {
-        $('#hour-9').addClass('present');
-    } else if (currentHour < 9) {
-        $('#hour-9').addClass('future');
+    function updateTime() {
+        $('.description').each(function () {
+            var textAreaHour = parseInt($(this).attr('id').split('-')[1])
+            if (currentHour > textAreaHour) {
+                $(this).addClass('past');
+            } else if (currentHour === textAreaHour) {
+                $(this).addClass('present');
+            } else if (currentHour < textAreaHour) {
+                $(this).addClass('future');
+            }
+        })
     }
-
-    if (currentHour > 10) {
-        $('#hour-10').addClass('past');
-    } else if (currentHour == 10) {
-        $('#hour-10').addClass('present');
-    } else if (currentHour < 10) {
-        $('#hour-10').addClass('future');
-    }
-    
-    if (currentHour > 11) {
-        $('#hour-11').addClass('past');
-    } else if (currentHour == 11) {
-        $('#hour-11').addClass('present');
-    } else if (currentHour < 11) {
-        $('#hour-11').addClass('future');
-    }
-    
-    if (currentHour > 12) {
-        $('#hour-12').addClass('past');
-    } else if (currentHour == 12) {
-        $('#hour-12').addClass('present');
-    } else if (currentHour < 12) {
-        $('#hour-12').addClass('future');
-    }
-    
-    if (currentHour > 13) {
-        $('#hour-1').addClass('past');
-    } else if (currentHour == 13) {
-        $('#hour-1').addClass('present');
-    } else if (currentHour < 13) {
-        $('#hour-1').addClass('future');
-    }
-    
-    if (currentHour > 14) {
-        $('#hour-2').addClass('past');
-    } else if (currentHour == 14) {
-        $('#hour-2').addClass('present');
-    } else if (currentHour < 14) {
-        $('#hour-2').addClass('future');
-    }
-    
-    if (currentHour > 15) {
-        $('#hour-3').addClass('past');
-    } else if (currentHour == 15) {
-        $('#hour-3').addClass('present');
-    } else if (currentHour < 15) {
-        $('#hour-3').addClass('future');
-    }
-    
-    if (currentHour > 16) {
-        $('#hour-4').addClass('past');
-    } else if (currentHour == 16) {
-        $('#hour-4').addClass('present');
-    } else if (currentHour < 16) {
-        $('#hour-4').addClass('future');
-    }
-    
-    if (currentHour > 17) {
-        $('#hour-5').addClass('past');
-    } else if (currentHour == 17) {
-        $('#hour-5').addClass('present');
-    } else if (currentHour < 17) {
-        $('#hour-5').addClass('future');
-    }
+    updateTime()
 
     //Save All Text Fields Function
-    $('.saveBtn').on('click', function() {
+    $('.saveBtn').on('click', function () {
+        
         //Setting Text Field Variables
         const value9 = $('#hour-9').val();
         const value10 = $('#hour-10').val();
@@ -104,7 +47,7 @@ $(document).ready(function() {
         localStorage.setItem('hour2', value2);
         localStorage.setItem('hour3', value3);
         localStorage.setItem('hour4', value4);
-        localStorage.setItem('hour5', value5); 
+        localStorage.setItem('hour5', value5);
 
         //Reload Page
         location.reload();

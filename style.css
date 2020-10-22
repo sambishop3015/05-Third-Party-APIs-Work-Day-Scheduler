@@ -14,7 +14,7 @@ textarea {
 }
 
 .row {
-  margin: 39px
+  margin: 5px
 }
 
 textarea.description {
@@ -76,4 +76,8 @@ textarea.description {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+
+.fa-save {
+  position: unset;
 }
